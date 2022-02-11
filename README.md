@@ -3,7 +3,11 @@ Desafio para Desenvolvedores Backend.
 
 >  This is a challenge by [Coodesh](https://coodesh.com/)
 
+## Link da apresentação
+https://www.loom.com/embed/1c175b5b08164379a089a5fa6f329718
+
 ## Observações
+- O arquivo .env foi commitado junto do projeto para facilitar o Deploy (apesar de não ser a melhor prática)
 
 ## Tecnologias Utilizadas
 - NodeJS
