@@ -1,0 +1,35 @@
+version: '2'
+services:
+  node-app:
+    build: ./docker
+    volumes:
+      - ./:/app
+      - ./docker/app/entrypoint.sh:/entrypoint.sh
+    working_dir: /app
+    command: ['sh', '/entrypoint.sh']
+    ports:
+      - 3000:3000
+
+  cron:
+    build: ./docker
+    volumes:
+      - ./:/app
+      - ./docker/cron/entrypoint.sh:/entrypoint.sh
+    working_dir: /app
+    command: ['sh', '/entrypoint.sh']
+
+  feed-database:
+    build: ./docker
+    volumes:
+      - ./:/app
+      - ./docker/feed-database/entrypoint.sh:/entrypoint.sh
+    working_dir: /app
+    command: ['sh', '/entrypoint.sh']
+
+  delete-collection:
+    build: ./docker
+    volumes:
+      - ./:/app
+      - ./docker/delete-collection/entrypoint.sh:/entrypoint.sh
+    working_dir: /app
+    command: ['sh', '/entrypoint.sh']

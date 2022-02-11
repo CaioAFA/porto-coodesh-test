@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "090367c6-3d28-42f4-80c8-caca70ced234",
+		"name": "Porto Teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/articles?page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /articles/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/articles/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /articles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Astronauta Caio Arabal embarca em nova missão para ir à Lua\",\n    \"url\": \"https://www.youtube.com/watch?v=ZzKCb-szZpc\",\n    \"imageUrl\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvGl5Owy-a9TVgGU3-sqBORAhKxbPZmBM6-eQ3MnmDkEEYFoWzRgMNxzUssXP-FsQKeII&usqp=CAU\",\n    \"newsSite\": \"Arrabal News\",\n    \"summary\": \"Algum Summary\",\n    \"featured\": false,\n    \"launches\": [\n      {\n        \"id\": \"998\",\n        \"provider\": \"Caio Arrabal\"\n      },\n      {\n        \"id\": \"999\",\n        \"provider\": \"Astolfo Arrabal\"\n      }\n    ],\n    \"events\": [\n      {\n        \"id\": \"1000\",\n        \"provider\": \"José Arrabal\"\n      },\n      {\n        \"id\": \"1001\",\n        \"provider\": \"Marinaldo Arrabal\"\n      }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /articles/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/articles/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /articles/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Astronauta Atualizado\",\n    \"url\": \"url atualizado\",\n    \"imageUrl\": \"image url atualizado\",\n    \"newsSite\": \"Arrabal Atualizado\",\n    \"summary\": \"Algum Atualizado\",\n    \"featured\": true,\n    \"launches\": [\n        {\n            \"id\": \"998\",\n            \"provider\": \"Caio Arrabal Atualizado\"\n        },\n        {\n            \"id\": \"999\",\n            \"provider\": \"Astolfo Arrabal Atualizado\"\n        }\n    ],\n    \"events\": [\n        {\n            \"id\": \"1000\",\n            \"provider\": \"José Arrabal Atualizado\"\n        },\n        {\n            \"id\": \"1001\",\n            \"provider\": \"Marinaldo Arrabal Atualizado\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/articles/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"articles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

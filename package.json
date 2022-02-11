@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "node app",
+    "cron": "node cron",
+    "feed-database": "node feed-database",
+    "delete-collection": "node delete-collection",
+    "docker-start": "docker-compose up --build node-app",
+    "docker-cron": "docker-compose up --build cron",
+    "docker-feed-database": "docker-compose up --build feed-database",
+    "docker-delete-collection": "docker-compose up --build delete-collection"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1",
+    "nodemailer": "^6.7.2"
+  }
+}
